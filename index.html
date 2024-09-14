@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandera de México - Personalizable</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo de estilo personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>Bandera de México</h1>
+        
+        <!-- Controles para cambiar los colores -->
+        <div class="row mt-4 align-items-center">
+            <!-- Control para el verde -->
+            <div class="col-md-4">
+                <h3 class="titulo">Esperanza</h3>
+                <input type="range" id="sliderVerde" min="0" max="255" value="104">
+                <p>Valor verde: <span id="valorVerde">#006847</span></p>
+            </div>
+
+            <!-- Texto "Unidad" en el centro -->
+            <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+                <h3 class="titulo">Unidad</h3>
+                <p id="valorBlanco">#FFFFFF</p>
+            </div>
+
+            <!-- Control para el rojo -->
+            <div class="col-md-4">
+                <h3 class="titulo">Sangre de nuestros héroes nacionales</h3>
+                <input type="range" id="sliderRojo" min="0" max="255" value="206">
+                <p>Valor rojo: <span id="valorRojo">#CE1126</span></p>
+            </div>
+        </div>
+
+        <!-- Bandera con los colores modificables -->
+        <div class="flag-container mt-4">
+            <div id="flag" class="flag">
+                <div class="band green"></div>
+                <div class="band white">
+                    <!-- Escudo de México -->
+                    <img src="escudo.jpg" alt="Escudo de México" class="img-fluid" id="escudo">
+                </div>
+                <div class="band red"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Archivo JavaScript personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
